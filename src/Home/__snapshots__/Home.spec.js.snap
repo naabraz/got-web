@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home screen Should match snapshot 1`] = `
+<div
+  className="sc-bdVaJa bvPUMP"
+>
+  <h1
+    className="sc-bwzfXH kwYnvM"
+  >
+    Game of Thrones
+  </h1>
+</div>
+`;
