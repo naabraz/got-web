@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 
+// @flow
+
 import {
   Container,
   Title,
 } from './Home.styles';
 
-export const Home = ({ withService }) => {
+type Props = {
+  withService: Function
+}
+
+export const Home = ({ withService }: Props) => {
   const callService = async () => {
     withService();
   };
