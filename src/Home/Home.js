@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Container,
@@ -6,20 +6,19 @@ import {
 } from './Home.styles';
 
 export const Home = ({ withService }) => {
-  const [houses, housesSet] = useState(false);
-
   const callService = async () => {
-    const response = withService();
-    housesSet(response);
+    withService();
   };
 
   useEffect(() => {
     callService();
-  });
+  }, []);
 
   return (
     <Container>
-      <Title>Game of Thrones</Title>
+      <Title>
+        Game of Thrones
+      </Title>
     </Container>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import { Home } from './Home';
 
 describe('Home screen', () => {
   const props = {
-    getHouses: jest.fn().mockImplementation(() => []),
+    withService: jest.fn().mockImplementation(() => []),
   };
 
   it('Should match snapshot', () => {
@@ -14,9 +14,12 @@ describe('Home screen', () => {
     expect(HomeScreen).toMatchSnapshot();
   });
 
-  it('Should call API to get all houses', () => {
-    shallow(<Home {...props} />).update();
+  it('Should call API to get all houses', async () => {
+    const component = mount(<Home {...props} />);
 
-    expect(props.getHouses).toHaveBeenCalled();
+    setImmediate(() => {
+      component.update();
+      expect(props.withService).toHaveBeenCalled();
+    });
   });
 });
