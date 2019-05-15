@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-
 // @flow
+import React, { useEffect } from 'react';
 
 import {
   Container,
@@ -8,17 +7,17 @@ import {
 } from './Home.styles';
 
 type Props = {
-  withService: Function
+  withService: Object
 }
 
 export const Home = ({ withService }: Props) => {
-  const callService = async () => {
-    withService();
-  };
-
   useEffect(() => {
+    const callService = async () => {
+      withService();
+    };
+
     callService();
-  }, []);
+  }, [withService]);
 
   return (
     <Container>
