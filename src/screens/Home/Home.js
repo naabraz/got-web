@@ -1,29 +1,18 @@
 // @flow
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import {
-  Container,
-  Title,
-} from './Home.styles';
+import { Container, Title } from './Home.styles';
+import { GotList } from '../../components/GotList';
 
 type Props = {
-  withService: Object
+  houses: Array<Object>
 }
 
-export const Home = ({ withService }: Props) => {
-  useEffect(() => {
-    const callService = async () => {
-      withService();
-    };
-
-    callService();
-  }, [withService]);
-
-  return (
-    <Container>
-      <Title>
-        Game of Thrones
-      </Title>
-    </Container>
-  );
-};
+export const Home = ({ houses }: Props) => (
+  <Container>
+    <Title>
+      Game of Thrones
+    </Title>
+    <GotList houses={houses} />
+  </Container>
+);

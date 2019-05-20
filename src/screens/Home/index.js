@@ -1,4 +1,3 @@
-import { withService } from './Home.service';
-import { Home } from './Home';
+import { HomeContainer } from './Home.container';
 
-export default withService(Home);
+export default HomeContainer;
