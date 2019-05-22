@@ -9,5 +9,19 @@ exports[`Home screen Should match snapshot 1`] = `
   >
     Game of Thrones
   </h1>
+  <ul
+    className="sc-htpNat hHtpcc"
+  >
+    <li
+      className="sc-bxivhb eBNJKg"
+    >
+      Targaryen
+    </li>
+    <li
+      className="sc-bxivhb eBNJKg"
+    >
+      Stark
+    </li>
+  </ul>
 </div>
 `;
