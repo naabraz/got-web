@@ -1,0 +1,1 @@
+export { GotTitle } from './GotTitle';

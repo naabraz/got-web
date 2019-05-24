@@ -1,18 +1,15 @@
 // @flow
 import React from 'react';
 
-import { Container, Title } from './Home.styles';
-import { GotList } from '../../components/GotList';
+import { GotContainer, GotTitle, GotList } from '../../components';
 
 type Props = {
   houses: Array<Object>
 }
 
 export const Home = ({ houses }: Props) => (
-  <Container>
-    <Title>
-      Game of Thrones
-    </Title>
+  <GotContainer>
+    <GotTitle title="Game of Thrones" />
     <GotList houses={houses} />
-  </Container>
+  </GotContainer>
 );
