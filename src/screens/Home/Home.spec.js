@@ -1,8 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-// import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { Home } from './Home';
+import { GotTitle, GotList } from '../../components';
 
 describe('Home screen', () => {
   it('Should match snapshot', () => {
@@ -11,14 +12,12 @@ describe('Home screen', () => {
     expect(HomeScreen).toMatchSnapshot();
   });
 
-  // it('Should call API to get all houses', async () => {
-  //   const houses = [{ name: 'Targaryen', id: 1 }, { name: 'Stark', id: 2 }];
+  it('Should render houses array', async () => {
+    const houses = [{ name: 'Targaryen', id: 1 }, { name: 'Stark', id: 2 }];
 
-  //   const component = mount(<Home houses={houses} />);
+    const component = shallow(<Home houses={houses} />);
 
-  //   setImmediate(() => {
-  //     component.update();
-  //     expect(props.withService).toHaveBeenCalled();
-  //   });
-  // });
+    expect(component.find(GotTitle).at(0).props()).toEqual({ title: 'Game of Thrones' });
+    expect(component.find(GotList).at(0).props()).toEqual({ houses });
+  });
 });

@@ -2,10 +2,10 @@
 
 exports[`Home screen Should match snapshot 1`] = `
 <div
-  className="sc-bdVaJa bvPUMP"
+  className="sc-bdVaJa gAZJRi"
 >
   <h1
-    className="sc-bwzfXH kwYnvM"
+    className="sc-bwzfXH BMBwd"
   >
     Game of Thrones
   </h1>
@@ -13,12 +13,12 @@ exports[`Home screen Should match snapshot 1`] = `
     className="sc-htpNat hHtpcc"
   >
     <li
-      className="sc-bxivhb eBNJKg"
+      className="sc-bxivhb jtraUk"
     >
       Targaryen
     </li>
     <li
-      className="sc-bxivhb eBNJKg"
+      className="sc-bxivhb jtraUk"
     >
       Stark
     </li>
