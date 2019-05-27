@@ -15,7 +15,5 @@ export const HomeContainer = () => {
     callService();
   });
 
-  return (
-    <Home houses={houses} />
-  );
+  return (<Home houses={houses} />);
 };
