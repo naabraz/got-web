@@ -6,11 +6,11 @@
     "babel-preset-react-app": "^8.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
+    "got-api-lib": "git+ssh://git@github.com:naabraz/got-api-lib.git",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
-    "styled-components": "^4.2.0",
-    "got-api-lib": "git+ssh://git@github.com:naabraz/got-api-lib.git"
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
